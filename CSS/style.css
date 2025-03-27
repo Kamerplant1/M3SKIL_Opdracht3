@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    font-family: sans-serif;
+    background: #A36135;
+    padding: 4rem;
+}
+
+.cards{
+    height: 85vh;
+    display:grid;
+    width:100%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+    gap: 2rem;
+}
+
+.card{
+
+    border-radius: 1rem;
+    box-shadow: 0 2rem 5rem 0 rgba(0,0,0,0.2);
+    list-style: none;
+    background: rgba(255,255,255,0.9)
+}
+
+.card--first{
+grid-column: 1 / 5;
+grid-row: 1 / 7;
+padding: 4rem;
+display:flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.card--first > input{
+    width:70%;
+    height:3rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.card--second{
+    grid-column: 5 / 13;
+    grid-row: 1 / 9;
+    padding: 4rem;
+    line-height: 1.5;
+}
+
+
+.card--second > img{
+    width:7.5rem;
+    height:7.5rem;
+    margin-left: 83rem;
+    border-radius: 0.5rem;
+}
+
+.card--third{
+    grid-row: 7 / 13;
+    grid-column: 2 / 5;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.card--third > img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+
+}
+
+.card--third > button{
+    width: 15rem;
+    height: 6rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    border:none;
+    background:#F7D346;
+    color:#3f3025;
+    border-radius:0.5rem;
+}
+
+.card--third > button:hover{
+    transform: scale(105%);
+    transition-duration: 0.3s;
+}
+.card--third > button:not(:hover)
+{
+    transform: scale(100%);
+    transition-duration: 0.3s;
+}
+
+@media screen and (max-width: 87.5rem){
+    .card--second{
+        grid-row: 1 / 13;
+    }
+
+    .card--third{
+        grid-column: 1 / 5;
+    }
+}
+
+@media screen and (max-width: 62.5rem) {
+    .card--first,.card--second{
+        display:none;
+    }
+    .card--third{
+        grid-column:1/13;
+        grid-row:1/13;
+    }
+}
